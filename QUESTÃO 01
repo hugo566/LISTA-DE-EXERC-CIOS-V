@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+// Função recursiva para calcular a soma de 1 até n
+int soma(int n) {
+    if (n == 0) // Caso base
+        return 0;
+    else
+        return n + soma(n - 1); // Passo recursivo
+}
+
+int main() {
+    int n;
+
+    printf("Digite um número: ");
+    scanf("%d", &n);
+
+    if (n < 0) {
+        printf("Por favor, insira um número positivo.\n");
+    } else {
+        int resultado = soma(n);
+        printf("A soma de 1 até %d é %d\n", n, resultado);
+    }
+
+    return 0;
+}
