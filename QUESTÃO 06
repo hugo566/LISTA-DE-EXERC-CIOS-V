@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int maior(int a, int b, int c) {
+    if (a > b && a > c) return a;
+    if (b > c) return b;
+    return c;
+}
+
+int main() {
+    int num1, num2, num3;
+
+    printf("Digite três números: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+
+    printf("O maior número é: %d\n", maior(num1, num2, num3));
+
+    return 0;
+}
